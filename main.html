@@ -93,7 +93,23 @@
             <!-- Add more contact information as needed -->
         </div>
     </section>
+<script>
+    document.addEventListener('contextmenu', function (e) {
+        e.preventDefault(); // Disable right-click
+    });
 
+    document.addEventListener('keydown', function (e) {
+        if (e.ctrlKey && (e.key === 'u' || e.key === 'U')) {
+            e.preventDefault(); // Disable Ctrl+U
+        }
+        if (e.ctrlKey && e.shiftKey && (e.key === 'c' || e.key === 'C')) {
+            e.preventDefault(); // Disable Ctrl+U
+        }
+        if (e.ctrlKey && e.shiftKey && (e.key === 'i' || e.key === 'I')) {
+            e.preventDefault(); // Disable Ctrl+U
+        }
+    });
+</script>
     <script src="main.js"></script>
 </body>
 
